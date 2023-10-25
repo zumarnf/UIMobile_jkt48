@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class verif4 extends StatelessWidget {
-  const verif4({super.key});
+class fav4 extends StatelessWidget {
+  const fav4({super.key});
 
   Widget build(BuildContext context) {
     return Padding(
@@ -17,7 +18,7 @@ class verif4 extends StatelessWidget {
               child: Center(
                 child: Text(
                   "Oshi",
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                       color: Colors.white, // Warna teks putih
                       fontWeight: FontWeight.bold,
                       fontSize: 28),
@@ -30,7 +31,7 @@ class verif4 extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: Color.fromRGBO(247, 140, 162, 1), // Warna border
+                  color: const Color.fromRGBO(247, 140, 162, 1), // Warna border
                   width: 2.0, // Ketebalan border
                 ),
                 borderRadius: BorderRadius.circular(5.0), // Sudut border
@@ -46,7 +47,8 @@ class verif4 extends StatelessWidget {
             Center(
               child: Text(
                 "Angelina Christy",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.bold, fontSize: 20),
               ),
             ),
             SizedBox(height: 20),
@@ -86,48 +88,57 @@ class verif4 extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
-                  width: 135, // Lebar kotak pertama
-                  height: 40, // Tinggi kotak pertama
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(
-                        210, 43, 82, 1), // Warna latar belakang kotak pertama
-
-                    borderRadius: BorderRadius.circular(
-                        10.0), // Radius sudut kotak pertama
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Alamat Fan Letter',
-                      style: TextStyle(
-                        color: const Color.fromARGB(
-                            255, 255, 255, 255), // Warna teks
+                TextButton(
+                  onPressed: () {
+                    // Fungsi yang akan dijalankan saat tombol ditekan
+                  },
+                  style: ButtonStyle(
+                    minimumSize: MaterialStateProperty.all<Size>(
+                        Size(150, 50)), // Atur tinggi dan lebar di sini
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        const Color.fromRGBO(
+                            210, 43, 82, 1)), // Warna latar belakang
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(10.0), // Radius sudut
                       ),
                     ),
                   ),
-                ),
-                Container(
-                  width: 120, // Lebar kotak kedua
-                  height: 40, // Tinggi kotak kedua
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(
-                        210, 43, 82, 1), // Warna latar belakang kotak kedua
-
-                    borderRadius:
-                        BorderRadius.circular(10.0), // Radius sudut kotak kedua
+                  child: Text(
+                    'Alamat Fan Letter',
+                    style: GoogleFonts.poppins(
+                      color: Color.fromARGB(255, 255, 255, 255), // Warna teks
+                    ),
                   ),
-                  child: Center(
-                    child: Text(
-                      'Ganti',
-                      style: TextStyle(
-                        color: Color.fromRGBO(255, 255, 255, 1), // Warna teks
+                ),
+                TextButton(
+                  onPressed: () {
+                    // Fungsi yang akan dijalankan saat tombol ditekan
+                  },
+                  style: ButtonStyle(
+                    minimumSize: MaterialStateProperty.all<Size>(
+                        Size(150, 50)), // Atur tinggi dan lebar di sini
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        const Color.fromRGBO(
+                            210, 43, 82, 1)), // Warna latar belakang
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(10.0), // Radius sudut
                       ),
+                    ),
+                  ),
+                  child: Text(
+                    'Ganti',
+                    style: GoogleFonts.poppins(
+                      color: Color.fromARGB(255, 255, 255, 255), // Warna teks
                     ),
                   ),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Container(
@@ -138,41 +149,49 @@ class verif4 extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  Text(
-                    'JIKOSHOUKAI',
-                    style: TextStyle(
-                      color: Colors.white, // Warna teks putih
-                      fontWeight: FontWeight.bold, // Teks bold
-                      fontSize: 19, // Ukuran font 19
+                  Padding(
+                    padding: EdgeInsets.all(
+                        10.0), // Padding di atas, bawah, kiri, dan kanan
+                    child: Text(
+                      'JIKOSHOUKAI',
+                      style: GoogleFonts.poppins(
+                        color: Colors.white, // Warna teks putih
+                        fontWeight: FontWeight.bold, // Teks bold
+                        fontSize: 19, // Ukuran font 19
+                      ),
                     ),
                   ),
                   SizedBox(
                       height:
                           15), // Jarak antara teks "JIKOSHOUKAI" dan teks selanjutnya
-                  Center(
-                    child: Text(
-                      '"Peduli dan baik hati... Siapakah dia? Christy..."',
-                      style: TextStyle(
-                        color: Colors.white, // Warna teks putih
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                        fontStyle: FontStyle.italic,
+                  Padding(
+                    padding: EdgeInsets.all(
+                        10.0), // Padding di atas, bawah, kiri, dan kanan
+                    child: Center(
+                      child: Text(
+                        '"Peduli dan baik hati... Siapakah dia? Christy..."',
+                        style: GoogleFonts.poppins(
+                          color: Colors.white, // Warna teks putih
+                          fontWeight: FontWeight.bold,
+                          fontSize: 13,
+                          fontStyle: FontStyle.italic,
+                        ),
                       ),
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 45,
             ),
             Container(
-              padding: EdgeInsets.all(10.0),
-              decoration: BoxDecoration(
+              padding: const EdgeInsets.all(10.0),
+              decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(15)),
                 color: Color.fromRGBO(247, 140, 162, 9),
               ),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   IconProperty(
@@ -193,24 +212,24 @@ class verif4 extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Container(
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: Color.fromRGBO(247, 140, 162, 1), // Warna border
+                  color: const Color.fromRGBO(247, 140, 162, 1), // Warna border
                   width: 2.0, // Ketebalan border
                 ),
-                borderRadius: BorderRadius.all(Radius.circular(15)),
+                borderRadius: const BorderRadius.all(Radius.circular(15)),
               ),
               child: Column(
                 children: [
                   Container(
                     width: double.infinity,
-                    padding: EdgeInsets.all(10.0),
-                    decoration: BoxDecoration(
+                    padding: const EdgeInsets.all(10.0),
+                    decoration: const BoxDecoration(
                       color: Color.fromRGBO(247, 140, 162, 9),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(
@@ -222,7 +241,7 @@ class verif4 extends StatelessWidget {
                       alignment: Alignment.center,
                       child: Text(
                         'Jadwal Event',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
@@ -230,8 +249,8 @@ class verif4 extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Divider(),
-                  SizedBox(height: 10),
+                  const Divider(),
+                  const SizedBox(height: 10),
                   Container(
                     height: 290, // Atur tinggi ListView sesuai kebutuhan
                     child: ListView(
@@ -241,8 +260,8 @@ class verif4 extends StatelessWidget {
                             child: Text(
                               'Pestapora',
                               textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: const Color.fromRGBO(247, 140, 162, 1),
+                              style: GoogleFonts.poppins(
+                                  color: Color.fromRGBO(247, 140, 162, 1),
                                   fontWeight: FontWeight
                                       .bold), // Atur teks menjadi di tengah
                             ),
@@ -250,14 +269,14 @@ class verif4 extends StatelessWidget {
                           subtitle: Center(child: Text('12 Desember 2023')),
                           tileColor: Colors.white, // Latar belakang putih
                         ),
-                        Divider(),
+                        const Divider(),
                         ListTile(
                           title: Center(
                             child: Text(
                               'Aniversary Concert',
                               textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: const Color.fromRGBO(247, 140, 162, 1),
+                              style: GoogleFonts.poppins(
+                                  color: Color.fromRGBO(247, 140, 162, 1),
                                   fontWeight: FontWeight
                                       .bold), // Atur teks menjadi di tengah
                             ),
@@ -265,14 +284,14 @@ class verif4 extends StatelessWidget {
                           subtitle: Center(child: Text('17 Desember 2023')),
                           tileColor: Colors.white, // Latar belakang putih
                         ),
-                        Divider(),
+                        const Divider(),
                         ListTile(
                           title: Center(
                             child: Text(
                               'RCTI Awards',
                               textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: const Color.fromRGBO(247, 140, 162, 1),
+                              style: GoogleFonts.poppins(
+                                  color: Color.fromRGBO(247, 140, 162, 1),
                                   fontWeight: FontWeight
                                       .bold), // Atur teks menjadi di tengah
                             ),
@@ -280,27 +299,34 @@ class verif4 extends StatelessWidget {
                           subtitle: Center(child: Text('10 Januari 2024')),
                           tileColor: Colors.white, // Latar belakang putih
                         ),
-                        SizedBox(
+                        const SizedBox(
                             height:
                                 20), // Menambahkan jarak sebelum kotak di bawahnya
-                        Container(
-                          width: double.infinity,
-                          padding: EdgeInsets.all(10.0),
-                          decoration: BoxDecoration(
-                            color: Color.fromRGBO(
-                                210, 43, 82, 1), // Warna latar belakang putih
-                            borderRadius: BorderRadius.circular(
-                                15.0), // Atur radius sudut kotak
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Teks di Kotak',
-                              style: TextStyle(
-                                color: Color.fromRGBO(
-                                    255, 255, 255, 1), // Warna teks
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
+                        TextButton(
+                          onPressed: () {
+                            // Tindakan yang ingin Anda lakukan ketika tombol ditekan
+                          },
+                          style: ButtonStyle(
+                            minimumSize:
+                                MaterialStateProperty.all<Size>(Size(150, 50)),
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                const Color.fromRGBO(
+                                    210, 43, 82, 1)), // Warna latar belakang
+                            shape: MaterialStateProperty.all<
+                                RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(
+                                    15.0), // Radius sudut kotak
                               ),
+                            ),
+                          ),
+                          child: Text(
+                            'Lihat selengkapnya >>',
+                            style: GoogleFonts.poppins(
+                              color: Color.fromRGBO(
+                                  255, 255, 255, 1), // Warna teks
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
                             ),
                           ),
                         ),
@@ -335,19 +361,19 @@ class IconProperty extends StatelessWidget {
           icon,
           color: Colors.white,
         ),
-        SizedBox(
+        const SizedBox(
           height: 13,
         ),
         Text(
           text1.toString(),
-          style: TextStyle(color: Colors.white),
+          style: GoogleFonts.poppins(color: Colors.white),
         ),
-        SizedBox(
+        const SizedBox(
           height: 13,
         ),
         Text(
           text2.toString(),
-          style: TextStyle(color: Colors.white),
+          style: GoogleFonts.poppins(color: Colors.white),
         ),
       ],
     );

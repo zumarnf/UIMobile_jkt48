@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:prak_layout/p4/event4.dart';
-import 'package:prak_layout/p4/pertemuan4.dart';
+import 'package:prak_layout/p4/member4.dart';
+import 'package:prak_layout/p4/home4.dart';
 import 'package:prak_layout/p4/profile4.dart';
-import 'package:prak_layout/p4/verif4.dart';
+import 'package:prak_layout/p4/fav4.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,9 +37,9 @@ class _BottomNavigationBarExampleState
     extends State<BottomNavigationBarExample> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
-    pertemuan4(),
-    event4(),
-    verif4(),
+    home4(),
+    member4(),
+    fav4(),
     profile4(),
   ];
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class profile4 extends StatelessWidget {
   const profile4({super.key});
@@ -18,7 +19,7 @@ class profile4 extends StatelessWidget {
               child: Center(
                 child: Text(
                   "Profil",
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                       color: Colors.white, // Warna teks putih
                       fontWeight: FontWeight.bold,
                       fontSize: 28),
@@ -36,9 +37,16 @@ class profile4 extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(5.0), // Sudut border
               ),
-              child: Image.network(
-                'https://jkt48.com/profile/angelina_christy.jpg?v=20230116',
-                height: 200,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(
+                    5.0), // Sesuaikan dengan sudut border Container
+                child: Image.network(
+                  'https://image.popbela.com/content-images/post/20221021/9dc40ae2d58fbe302c5542b8de2cd283.jpg?width=750&format=webp&w=750',
+                  fit: BoxFit
+                      .cover, // Agar gambar sesuai dan dicrop sesuai dengan kotak
+                  height: 200,
+                  width: 150,
+                ),
               ),
             ),
             SizedBox(
@@ -46,39 +54,42 @@ class profile4 extends StatelessWidget {
             ),
             Center(
               child: Text(
-                "Angelina Christy",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                "Mamang Seok Ubaidi",
+                style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.bold, fontSize: 20),
               ),
             ),
             SizedBox(height: 20),
             ListTile(
-              title: Center(child: Text('Nama')),
-              subtitle: Center(child: Text('Angelina Christy')),
+              title: Center(
+                  child: Text(
+                'Nama',
+                style: GoogleFonts.poppins(),
+              )),
+              subtitle: Center(
+                  child: Text('Mamang Seok', style: GoogleFonts.poppins())),
             ),
             Divider(),
             ListTile(
-              title: Center(child: Text('Tanggal Lahir')),
-              subtitle: Center(child: Text('5 Desember 2005')),
+              title: Center(
+                  child: Text('Tanggal Lahir', style: GoogleFonts.poppins())),
+              subtitle: Center(
+                  child:
+                      Text('10 Desember 1992', style: GoogleFonts.poppins())),
             ),
             Divider(),
             ListTile(
-              title: Center(child: Text('Golongan Darah')),
-              subtitle: Center(child: Text('O')),
+              title:
+                  Center(child: Text('Horoskop', style: GoogleFonts.poppins())),
+              subtitle: Center(
+                  child: Text('Sagittarius', style: GoogleFonts.poppins())),
             ),
             Divider(),
             ListTile(
-              title: Center(child: Text('Horoskop')),
-              subtitle: Center(child: Text('Sagittarius')),
-            ),
-            Divider(),
-            ListTile(
-              title: Center(child: Text('Tinggi Badan')),
-              subtitle: Center(child: Text('163 cm')),
-            ),
-            Divider(),
-            ListTile(
-              title: Center(child: Text('Nama Panggilan')),
-              subtitle: Center(child: Text('Christy')),
+              title: Center(
+                  child: Text('Nama Panggilan', style: GoogleFonts.poppins())),
+              subtitle:
+                  Center(child: Text('Mang', style: GoogleFonts.poppins())),
             ),
             Divider(),
             SizedBox(
@@ -87,119 +98,57 @@ class profile4 extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
-                  width: 135, // Lebar kotak pertama
-                  height: 40, // Tinggi kotak pertama
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 255, 255,
-                        255), // Warna latar belakang kotak pertama
-                    border: Border.all(
-                      color: const Color.fromRGBO(
-                          247, 140, 162, 1), // Warna border kotak pertama
-                      width: 2.0, // Lebar border kotak pertama
-                    ),
-                    borderRadius: BorderRadius.circular(
-                        10.0), // Radius sudut kotak pertama
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Membership',
-                      style: TextStyle(
-                        color: Colors.black, // Warna teks
+                TextButton(
+                  onPressed: () {
+                    // Fungsi yang akan dijalankan saat tombol ditekan
+                  },
+                  style: ButtonStyle(
+                    minimumSize: MaterialStateProperty.all<Size>(
+                        Size(150, 50)), // Atur tinggi dan lebar di sini
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        const Color.fromRGBO(
+                            210, 43, 82, 1)), // Warna latar belakang
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(10.0), // Radius sudut
                       ),
+                    ),
+                  ),
+                  child: Text(
+                    'Membership',
+                    style: GoogleFonts.poppins(
+                      color: Color.fromARGB(255, 255, 255, 255), // Warna teks
+                      // Menggunakan Google Fonts
                     ),
                   ),
                 ),
-                Container(
-                  width: 130, // Lebar kotak kedua
-                  height: 40, // Tinggi kotak kedua
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(
-                        255, 255, 255, 255), // Warna latar belakang kotak kedua
-                    border: Border.all(
-                      color: const Color.fromRGBO(
-                          247, 140, 162, 1), // Warna border kotak kedua
-                      width: 2.0, // Lebar border kotak kedua
-                    ),
-                    borderRadius:
-                        BorderRadius.circular(10.0), // Radius sudut kotak kedua
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Setting',
-                      style: TextStyle(
-                        color: Colors.black, // Warna teks
+                TextButton(
+                  onPressed: () {
+                    // Fungsi yang akan dijalankan saat tombol ditekan
+                  },
+                  style: ButtonStyle(
+                    minimumSize: MaterialStateProperty.all<Size>(
+                        Size(150, 50)), // Atur tinggi dan lebar di sini
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        const Color.fromRGBO(
+                            210, 43, 82, 1)), // Warna latar belakang
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(10.0), // Radius sudut
                       ),
+                    ),
+                  ),
+                  child: Text(
+                    'Setting',
+                    style: GoogleFonts.poppins(
+                      color: Color.fromARGB(255, 255, 255, 255), // Warna teks
+                      // Menggunakan Google Fonts
                     ),
                   ),
                 ),
               ],
-            ),
-            SizedBox(
-              height: 25,
-            ),
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 10),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(15)),
-                color: Color.fromRGBO(247, 140, 162, 0.9),
-              ),
-              child: Column(
-                children: [
-                  Text(
-                    'JIKOSHOUKAI',
-                    style: TextStyle(
-                      color: Colors.white, // Warna teks putih
-                      fontWeight: FontWeight.bold, // Teks bold
-                      fontSize: 19, // Ukuran font 19
-                    ),
-                  ),
-                  SizedBox(
-                      height:
-                          15), // Jarak antara teks "JIKOSHOUKAI" dan teks selanjutnya
-                  Center(
-                    child: Text(
-                      '"Peduli dan baik hati... Siapakah dia? Christy..."',
-                      style: TextStyle(
-                        color: Colors.white, // Warna teks putih
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                        fontStyle: FontStyle.italic,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 45,
-            ),
-            Container(
-              padding: EdgeInsets.all(10.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(15)),
-                color: Color.fromRGBO(247, 140, 162, 9),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  IconProperty(
-                    icon: Icons.group,
-                    text1: "SENBATSU",
-                    text2: "9",
-                  ),
-                  IconProperty(
-                    icon: Icons.theaters,
-                    text1: "TEATER",
-                    text2: "200",
-                  ),
-                  IconProperty(
-                    icon: Icons.phonelink_ring,
-                    text1: "SOCIAL MEDIA",
-                    text2: "@Christyjkt48",
-                  )
-                ],
-              ),
             ),
             SizedBox(
               height: 45,
@@ -229,8 +178,8 @@ class profile4 extends StatelessWidget {
                     child: Align(
                       alignment: Alignment.center,
                       child: Text(
-                        'Jadwal Event',
-                        style: TextStyle(
+                        'Verifikasi Teather',
+                        style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
@@ -247,45 +196,57 @@ class profile4 extends StatelessWidget {
                         ListTile(
                           title: Center(
                             child: Text(
-                              'Pestapora',
+                              'Aitakatta',
                               textAlign: TextAlign.center,
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   color: const Color.fromRGBO(247, 140, 162, 1),
                                   fontWeight: FontWeight
                                       .bold), // Atur teks menjadi di tengah
                             ),
                           ),
-                          subtitle: Center(child: Text('12 Desember 2023')),
+                          subtitle: Center(
+                              child: Text(
+                            '12 Desember 2023',
+                            style: GoogleFonts.poppins(),
+                          )),
                           tileColor: Colors.white, // Latar belakang putih
                         ),
                         Divider(),
                         ListTile(
                           title: Center(
                             child: Text(
-                              'Aniversary Concert',
+                              'Banzai!',
                               textAlign: TextAlign.center,
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   color: const Color.fromRGBO(247, 140, 162, 1),
                                   fontWeight: FontWeight
                                       .bold), // Atur teks menjadi di tengah
                             ),
                           ),
-                          subtitle: Center(child: Text('17 Desember 2023')),
+                          subtitle: Center(
+                              child: Text(
+                            '17 Desember 2023',
+                            style: GoogleFonts.poppins(),
+                          )),
                           tileColor: Colors.white, // Latar belakang putih
                         ),
                         Divider(),
                         ListTile(
                           title: Center(
                             child: Text(
-                              'RCTI Awards',
+                              'Seishun Girls',
                               textAlign: TextAlign.center,
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   color: const Color.fromRGBO(247, 140, 162, 1),
                                   fontWeight: FontWeight
                                       .bold), // Atur teks menjadi di tengah
                             ),
                           ),
-                          subtitle: Center(child: Text('10 Januari 2024')),
+                          subtitle: Center(
+                              child: Text(
+                            '10 Januari 2024',
+                            style: GoogleFonts.poppins(),
+                          )),
                           tileColor: Colors.white, // Latar belakang putih
                         ),
                         // Tambahkan item-item ListView dengan latar belakang putih
@@ -298,43 +259,6 @@ class profile4 extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class IconProperty extends StatelessWidget {
-  final IconData icon;
-  final String? text1, text2;
-  const IconProperty({
-    super.key,
-    required this.icon,
-    required this.text1,
-    required this.text2,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Icon(
-          icon,
-          color: Colors.white,
-        ),
-        SizedBox(
-          height: 13,
-        ),
-        Text(
-          text1.toString(),
-          style: TextStyle(color: Colors.white),
-        ),
-        SizedBox(
-          height: 13,
-        ),
-        Text(
-          text2.toString(),
-          style: TextStyle(color: Colors.white),
-        ),
-      ],
     );
   }
 }

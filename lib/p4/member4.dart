@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class event4 extends StatelessWidget {
-  const event4({super.key});
+class member4 extends StatelessWidget {
+  const member4({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +14,7 @@ class event4 extends StatelessWidget {
           child: Column(
             children: [
               Container(
+                height: 60,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(15.0),
@@ -30,13 +32,13 @@ class event4 extends StatelessWidget {
                             alignment: Alignment.center,
                             child: Container(
                               margin: EdgeInsets.only(
-                                  left: 60.0), // Tambahkan margin kiri di sini
+                                  left: 50.0), // Tambahkan margin kiri di sini
                               child: Text(
                                 "Member",
-                                style: TextStyle(
+                                style: GoogleFonts.poppins(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 28,
+                                  fontSize: 24,
                                 ),
                               ),
                             ),
@@ -74,8 +76,8 @@ class event4 extends StatelessWidget {
                         final imageIndex = rowIndex * 3 + colIndex;
                         if (imageIndex < imageUrls.length) {
                           return Container(
-                            width: 95, // Lebar kotak kecil
-                            height: 125, // Tinggi kotak kecil
+                            width: 75, // Lebar kotak kecil
+                            height: 105, // Tinggi kotak kecil
                             margin: const EdgeInsets.all(
                                 4.0), // Margin antar kotak kecil
                             color: Color.fromRGBO(
@@ -84,8 +86,8 @@ class event4 extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Container(
-                                  width: 75, // Lebar gambar
-                                  height: 75, // Tinggi gambar
+                                  width: 60, // Lebar gambar
+                                  height: 60, // Tinggi gambar
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     image: DecorationImage(
@@ -100,7 +102,7 @@ class event4 extends StatelessWidget {
                                 const SizedBox(height: 8),
                                 Text(
                                   nama[imageIndex],
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -118,22 +120,26 @@ class event4 extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Container(
-                width: 145, // Lebar kotak pertama
-                height: 40, // Tinggi kotak pertama
-                decoration: BoxDecoration(
-                  color: Color.fromRGBO(
-                      210, 43, 82, 1), // Warna latar belakang kotak pertama
-                  borderRadius:
-                      BorderRadius.circular(20.0), // Radius sudut kotak pertama
-                ),
-                child: Center(
-                  child: Text(
-                    'Alamat Fan Letter',
-                    style: TextStyle(
-                      color: const Color.fromARGB(
-                          255, 250, 250, 250), // Warna teks
+              TextButton(
+                onPressed: () {
+                  // Fungsi yang akan dijalankan saat tombol ditekan
+                },
+                style: ButtonStyle(
+                  minimumSize: MaterialStateProperty.all<Size>(
+                      Size(150, 50)), // Atur tinggi dan lebar di sini
+                  backgroundColor: MaterialStateProperty.all<Color>(
+                      const Color.fromRGBO(
+                          210, 43, 82, 1)), // Warna latar belakang
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0), // Radius sudut
                     ),
+                  ),
+                ),
+                child: Text(
+                  'Alamat Fan Letter',
+                  style: GoogleFonts.poppins(
+                    color: Color.fromARGB(255, 255, 255, 255), // Warna teks
                   ),
                 ),
               ),
@@ -166,7 +172,7 @@ class event4 extends StatelessWidget {
                         alignment: Alignment.center,
                         child: Text(
                           'Jadwal Event',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
@@ -185,7 +191,7 @@ class event4 extends StatelessWidget {
                               child: Text(
                                 'Pestapora',
                                 textAlign: TextAlign.center,
-                                style: TextStyle(
+                                style: GoogleFonts.poppins(
                                     color:
                                         const Color.fromRGBO(247, 140, 162, 1),
                                     fontWeight: FontWeight
@@ -201,7 +207,7 @@ class event4 extends StatelessWidget {
                               child: Text(
                                 'Aniversary Concert',
                                 textAlign: TextAlign.center,
-                                style: TextStyle(
+                                style: GoogleFonts.poppins(
                                     color:
                                         const Color.fromRGBO(247, 140, 162, 1),
                                     fontWeight: FontWeight
@@ -217,7 +223,7 @@ class event4 extends StatelessWidget {
                               child: Text(
                                 'RCTI Awards',
                                 textAlign: TextAlign.center,
-                                style: TextStyle(
+                                style: GoogleFonts.poppins(
                                     color:
                                         const Color.fromRGBO(247, 140, 162, 1),
                                     fontWeight: FontWeight
@@ -230,24 +236,31 @@ class event4 extends StatelessWidget {
                           SizedBox(
                               height:
                                   20), // Menambahkan jarak sebelum kotak di bawahnya
-                          Container(
-                            width: double.infinity,
-                            padding: EdgeInsets.all(10.0),
-                            decoration: BoxDecoration(
-                              color: Color.fromRGBO(
-                                  210, 43, 82, 1), // Warna latar belakang putih
-                              borderRadius: BorderRadius.circular(
-                                  15.0), // Atur radius sudut kotak
-                            ),
-                            child: Center(
-                              child: Text(
-                                'Lihat selengkapnya >>',
-                                style: TextStyle(
-                                  color: Color.fromRGBO(
-                                      255, 255, 255, 1), // Warna teks
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
+                          TextButton(
+                            onPressed: () {
+                              // Tindakan yang ingin Anda lakukan ketika tombol ditekan
+                            },
+                            style: ButtonStyle(
+                              minimumSize: MaterialStateProperty.all<Size>(
+                                  Size(150, 50)),
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  const Color.fromRGBO(
+                                      210, 43, 82, 1)), // Warna latar belakang
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                      15.0), // Radius sudut kotak
                                 ),
+                              ),
+                            ),
+                            child: Text(
+                              'Lihat selengkapnya >>',
+                              style: GoogleFonts.poppins(
+                                color: Color.fromRGBO(
+                                    255, 255, 255, 1), // Warna teks
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
                               ),
                             ),
                           ),
