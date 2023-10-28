@@ -28,17 +28,18 @@ class Detailpertemuan5 extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
-        width: double.infinity, // Lebar penuh
-        height: 250, // Atur tinggi sesuai kebutuhan
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(product.picture
-                .toString()), // Ambil gambar dari data produk yang sesuai
-            fit: BoxFit.cover,
-          ),
+      body: SafeArea(
+          child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              width: double.infinity,
+              height: 300,
+              child: Image.asset(product.picture!),
+            )
+          ],
         ),
-      ),
+      )),
     );
   }
 }
