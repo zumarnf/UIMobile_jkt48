@@ -64,14 +64,16 @@ class _BottomNavigationBarExampleState
                   onPressed: () {},
                   child: Text(
                     "Login",
-                    style: GoogleFonts.poppins(color: Colors.white),
+                    style:
+                        GoogleFonts.poppins(color: Colors.white, fontSize: 11),
                   )),
               const Text("|"),
               TextButton(
                   onPressed: () {},
                   child: Text(
                     "Register",
-                    style: GoogleFonts.poppins(color: Colors.white),
+                    style:
+                        GoogleFonts.poppins(color: Colors.white, fontSize: 11),
                   )),
             ],
           )

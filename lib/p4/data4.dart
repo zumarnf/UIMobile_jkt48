@@ -1,36 +1,42 @@
 class Product {
-  String? picture, name, price, discount, description;
-  Product(
-      {required this.picture,
-      required this.name,
-      required this.price,
-      required this.discount,
-      this.description});
+  String? picture, name, price, discount, description, terjual;
+  Product({
+    required this.picture,
+    required this.name,
+    required this.price,
+    required this.discount,
+    this.description,
+    this.terjual,
+  });
 }
 
 List<Product> listProduct = <Product>[
   Product(
       picture: "assets/img/jkt.jpg",
-      name: "Sepatu",
-      price: "1000",
-      discount: "90",
-      description: "5000"),
+      name: "Setlist Tim J",
+      price: "Rp.100000",
+      discount: "90%",
+      description: "Rp.20000",
+      terjual: "1rb terjual"),
   Product(
       picture: "assets/img/jkt1.jpg",
-      name: "Tas",
-      price: "40300",
-      discount: "10",
-      description: "50000"),
+      name: "Everyday Kachuusa CD",
+      price: "Rp.40300",
+      discount: "10%",
+      description: "Rp.50000",
+      terjual: "1rb terjual"),
   Product(
       picture: "assets/img/jkt2.jpg",
-      name: "Jas",
-      price: "43000",
-      discount: "80",
-      description: "52000"),
+      name: "UZA CD",
+      price: "Rp.43000",
+      discount: "80%",
+      description: "Rp.52000",
+      terjual: "1rb terjual"),
   Product(
       picture: "assets/img/jkt3.jpg",
-      name: "Sepat",
-      price: "42000",
-      discount: "20",
-      description: "55000"),
+      name: "Rapsodi",
+      price: "Rp.42000",
+      discount: "20%",
+      description: "Rp.55000",
+      terjual: "1rb terjual"),
 ];
