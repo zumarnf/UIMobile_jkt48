@@ -36,12 +36,16 @@ List<Product> listProduct = <Product>[
       price: "Rp.43000",
       discount: "80%",
       description: "Rp.52000",
-      terjual: "1rb terjual"),
+      terjual: "1rb terjual",
+      penjelasan:
+          "UZA is a double single by JKT48, released on July 7, 2018, in Indonesia. It features dance elements from 48Group and is exclusively distributed by Universal Music Indonesia and Sony Music Entertainment Indonesia."),
   Product(
       picture: "assets/img/jkt3.jpg",
       name: "Rapsodi",
       price: "Rp.42000",
       discount: "20%",
       description: "Rp.55000",
-      terjual: "1rb terjual"),
+      terjual: "1rb terjual",
+      penjelasan:
+          "Rapsodi is a 21-song single from JKT48, released as the first original single. It was released on January 9, 2020, and was released as a CD+DVD on February 29, 2020."),
 ];
