@@ -445,7 +445,7 @@ class CardWithImage extends StatelessWidget {
           children: [
             Container(
               width: double.infinity,
-              height: 80, // Tinggi gambar
+              height: 95, // Tinggi gambar
               decoration: BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(image),

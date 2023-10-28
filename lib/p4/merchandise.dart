@@ -44,10 +44,10 @@ class _MerchandiseState extends State<Merchandise> {
           Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(right: 5, left: 16),
+                padding: EdgeInsets.only(right: 5, left: 14),
                 child: TextButton(
                   style: TextButton.styleFrom(
-                    padding: EdgeInsets.symmetric(horizontal: 13, vertical: 12),
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 14),
                     backgroundColor: Color.fromRGBO(255, 255, 255, 1),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -73,7 +73,7 @@ class _MerchandiseState extends State<Merchandise> {
                 padding: EdgeInsets.only(right: 5),
                 child: TextButton(
                   style: TextButton.styleFrom(
-                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                    padding: EdgeInsets.symmetric(horizontal: 6, vertical: 14),
                     backgroundColor: Color.fromRGBO(255, 255, 255, 1),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -99,7 +99,7 @@ class _MerchandiseState extends State<Merchandise> {
                 padding: EdgeInsets.only(right: 5),
                 child: TextButton(
                   style: TextButton.styleFrom(
-                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                    padding: EdgeInsets.symmetric(horizontal: 4, vertical: 14),
                     backgroundColor: Color.fromRGBO(255, 255, 255, 1),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -123,8 +123,8 @@ class _MerchandiseState extends State<Merchandise> {
               ),
               Container(
                 height: 30,
-                width: 35,
-                margin: EdgeInsets.all(3),
+                width: 32,
+                margin: EdgeInsets.all(2),
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Color.fromRGBO(210, 43, 82, 1),
@@ -138,7 +138,7 @@ class _MerchandiseState extends State<Merchandise> {
                     },
                     icon: Icon(
                       Icons.filter_alt,
-                      size: 16,
+                      size: 15,
                       color:
                           Color.fromRGBO(210, 43, 82, 1), // Set the icon color
                     ),
