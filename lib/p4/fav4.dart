@@ -53,33 +53,44 @@ class fav4 extends StatelessWidget {
             ),
             SizedBox(height: 20),
             ListTile(
-              title: Center(child: Text('Nama')),
-              subtitle: Center(child: Text('Angelina Christy')),
+              title: Center(child: Text('Nama', style: GoogleFonts.poppins())),
+              subtitle: Center(
+                  child:
+                      Text('Angelina Christy', style: GoogleFonts.poppins())),
             ),
             Divider(),
             ListTile(
-              title: Center(child: Text('Tanggal Lahir')),
-              subtitle: Center(child: Text('5 Desember 2005')),
+              title: Center(
+                  child: Text('Tanggal Lahir', style: GoogleFonts.poppins())),
+              subtitle: Center(
+                  child: Text('5 Desember 2005', style: GoogleFonts.poppins())),
             ),
             Divider(),
             ListTile(
-              title: Center(child: Text('Golongan Darah')),
-              subtitle: Center(child: Text('O')),
+              title: Center(
+                  child: Text('Golongan Darah', style: GoogleFonts.poppins())),
+              subtitle: Center(child: Text('O', style: GoogleFonts.poppins())),
             ),
             Divider(),
             ListTile(
-              title: Center(child: Text('Horoskop')),
-              subtitle: Center(child: Text('Sagittarius')),
+              title:
+                  Center(child: Text('Horoskop', style: GoogleFonts.poppins())),
+              subtitle: Center(
+                  child: Text('Sagittarius', style: GoogleFonts.poppins())),
             ),
             Divider(),
             ListTile(
-              title: Center(child: Text('Tinggi Badan')),
-              subtitle: Center(child: Text('163 cm')),
+              title: Center(
+                  child: Text('Tinggi Badan', style: GoogleFonts.poppins())),
+              subtitle:
+                  Center(child: Text('163 cm', style: GoogleFonts.poppins())),
             ),
             Divider(),
             ListTile(
-              title: Center(child: Text('Nama Panggilan')),
-              subtitle: Center(child: Text('Christy')),
+              title: Center(
+                  child: Text('Nama Panggilan', style: GoogleFonts.poppins())),
+              subtitle:
+                  Center(child: Text('Christy', style: GoogleFonts.poppins())),
             ),
             Divider(),
             SizedBox(

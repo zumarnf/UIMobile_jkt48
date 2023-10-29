@@ -76,7 +76,7 @@ class Detailpertemuan5 extends StatelessWidget {
                         children: [
                           Padding(
                             padding: EdgeInsets.only(
-                              top: 18,
+                              top: 23,
                               left: 30,
                             ), // Padding untuk jarak dari sisi kiri dan atas
                             child: Text(
@@ -185,15 +185,16 @@ class Detailpertemuan5 extends StatelessWidget {
                               // Aksi yang ingin Anda eksekusi ketika tombol pertama ditekan
                             },
                             style: TextButton.styleFrom(
-                              backgroundColor: Colors.blue,
+                              backgroundColor:
+                                  const Color.fromRGBO(210, 43, 82, 1),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
                             ),
                             child: Text(
-                              "Tombol Pertama",
+                              "Simpan",
                               style: TextStyle(
-                                fontSize: 16,
+                                fontSize: 14,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
@@ -209,15 +210,16 @@ class Detailpertemuan5 extends StatelessWidget {
                               // Aksi yang ingin Anda eksekusi ketika tombol kedua ditekan
                             },
                             style: TextButton.styleFrom(
-                              backgroundColor: Colors.red,
+                              backgroundColor:
+                                  const Color.fromRGBO(210, 43, 82, 1),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
                             ),
                             child: Text(
-                              "Tombol Kedua",
+                              "Beli",
                               style: TextStyle(
-                                fontSize: 16,
+                                fontSize: 14,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
