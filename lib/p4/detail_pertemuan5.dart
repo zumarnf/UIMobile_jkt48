@@ -69,158 +69,165 @@ class Detailpertemuan5 extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: 18,
-                      left: 30,
-                    ), // Padding untuk jarak dari sisi kiri dan atas
-                    child: Text(
-                      product.name!,
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: 10,
-                      left: 30,
-                    ), // Padding untuk jarak dari sisi kiri dan atas
-                    child: Text(
-                      product.price!,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(
-                          top: 7,
-                          left: 30,
-                          right: 10,
-                        ), // Padding untuk jarak dari sisi kiri dan atas
-                        child: Text(
-                          product.description!,
-                          style: TextStyle(
-                            fontSize: 16,
-                            decoration: TextDecoration.lineThrough,
-                            color: const Color.fromARGB(255, 156, 153, 153),
+                  Expanded(
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 18,
+                              left: 30,
+                            ), // Padding untuk jarak dari sisi kiri dan atas
+                            child: Text(
+                              product.name!,
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black,
+                              ),
+                            ),
                           ),
-                        ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 10,
+                              left: 30,
+                            ), // Padding untuk jarak dari sisi kiri dan atas
+                            child: Text(
+                              product.price!,
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(
+                                  top: 7,
+                                  left: 30,
+                                  right: 10,
+                                ), // Padding untuk jarak dari sisi kiri dan atas
+                                child: Text(
+                                  product.description!,
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    decoration: TextDecoration.lineThrough,
+                                    color: const Color.fromARGB(
+                                        255, 156, 153, 153),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                width: 35,
+                                height: 35,
+                                decoration: BoxDecoration(
+                                  color: Color.fromRGBO(230, 208, 212, 1),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    product.discount!,
+                                    style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                      color: Color.fromARGB(255, 237, 0, 0),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 7,
+                              left: 30,
+                            ), // Padding untuk jarak dari sisi kiri dan atas
+                            child: Text(
+                              "Deskripsi: ",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 7,
+                              left: 30,
+                              right: 30,
+                            ), // Padding untuk jarak dari sisi kiri dan atas
+                            child: Text(
+                              product.penjelasan!,
+                              style: TextStyle(
+                                fontSize: 11,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 11),
+                        ],
                       ),
-                      Container(
-                        width: 30,
-                        height: 30,
-                        decoration: BoxDecoration(
-                          color: Color.fromRGBO(230, 208, 212, 1),
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Center(
-                          child: Text(
-                            product.discount!,
-                            style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14,
-                              color: Color.fromARGB(255, 237, 0, 0),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 10), // Margin kanan dan kiri
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: TextButton(
+                            onPressed: () {
+                              // Aksi yang ingin Anda eksekusi ketika tombol pertama ditekan
+                            },
+                            style: TextButton.styleFrom(
+                              backgroundColor: Colors.blue,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                            ),
+                            child: Text(
+                              "Tombol Pertama",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: 7,
-                      left: 30,
-                    ), // Padding untuk jarak dari sisi kiri dan atas
-                    child: Text(
-                      "Deskripsi: ",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
+                        SizedBox(
+                          width: 10, // Spasi antara kedua TextButton
+                        ),
+                        Expanded(
+                          child: TextButton(
+                            onPressed: () {
+                              // Aksi yang ingin Anda eksekusi ketika tombol kedua ditekan
+                            },
+                            style: TextButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                            ),
+                            child: Text(
+                              "Tombol Kedua",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: 7,
-                      left: 30,
-                      right: 30,
-                    ), // Padding untuk jarak dari sisi kiri dan atas
-                    child: Text(
-                      product.penjelasan!,
-                      style: TextStyle(
-                        fontSize: 10,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 11),
                 ],
-              ),
-            ),
-            Positioned(
-              bottom: 0,
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: 20), // Margin kanan dan kiri
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                      child: TextButton(
-                        onPressed: () {
-                          // Aksi yang ingin Anda eksekusi ketika tombol pertama ditekan
-                        },
-                        style: TextButton.styleFrom(
-                          backgroundColor: Colors.blue,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                          ),
-                        ),
-                        child: Text(
-                          "Tombol Pertama",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10, // Spasi antara kedua TextButton
-                    ),
-                    Expanded(
-                      child: TextButton(
-                        onPressed: () {
-                          // Aksi yang ingin Anda eksekusi ketika tombol kedua ditekan
-                        },
-                        style: TextButton.styleFrom(
-                          backgroundColor: Colors.red,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                          ),
-                        ),
-                        child: Text(
-                          "Tombol Kedua",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
               ),
             ),
           ],
