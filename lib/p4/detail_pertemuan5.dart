@@ -23,9 +23,7 @@ class Detailpertemuan5 extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(Icons.share),
-            onPressed: () {
-              // Tambahkan logika berbagi di sini
-            },
+            onPressed: () {},
           ),
         ],
       ),
@@ -165,61 +163,64 @@ class Detailpertemuan5 extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 11),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 20), // Margin kanan dan kiri
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Expanded(
-                          child: TextButton(
-                            onPressed: () {
-                              // Aksi yang ingin Anda eksekusi ketika tombol pertama ditekan
-                            },
-                            style: TextButton.styleFrom(
-                              backgroundColor: Colors.blue,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                            ),
-                            child: Text(
-                              "Tombol Pertama",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 10, // Spasi antara kedua TextButton
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            onPressed: () {
-                              // Aksi yang ingin Anda eksekusi ketika tombol kedua ditekan
-                            },
-                            style: TextButton.styleFrom(
-                              backgroundColor: Colors.red,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                            ),
-                            child: Text(
-                              "Tombol Kedua",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
                 ],
+              ),
+            ),
+            Positioned(
+              bottom: 0,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: 20), // Margin kanan dan kiri
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: TextButton(
+                        onPressed: () {
+                          // Aksi yang ingin Anda eksekusi ketika tombol pertama ditekan
+                        },
+                        style: TextButton.styleFrom(
+                          backgroundColor: Colors.blue,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                        child: Text(
+                          "Tombol Pertama",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10, // Spasi antara kedua TextButton
+                    ),
+                    Expanded(
+                      child: TextButton(
+                        onPressed: () {
+                          // Aksi yang ingin Anda eksekusi ketika tombol kedua ditekan
+                        },
+                        style: TextButton.styleFrom(
+                          backgroundColor: Colors.red,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                        child: Text(
+                          "Tombol Kedua",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
