@@ -32,7 +32,7 @@ class Detailpertemuan5 extends StatelessWidget {
           children: [
             Image.asset(
               "assets/img/background.jpg",
-              width: double.infinity,
+              width: MediaQuery.of(context).size.width,
               height: 280,
               fit: BoxFit.cover,
             ),
@@ -48,7 +48,7 @@ class Detailpertemuan5 extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: double.infinity,
+              width: MediaQuery.of(context).size.width,
               height: 220,
               child: Image.asset(product.picture!),
             ),
@@ -64,7 +64,9 @@ class Detailpertemuan5 extends StatelessWidget {
                   width: 2.0, // Lebar border
                 ),
               ),
-              width: double.infinity, // Mengatur lebar menjadi full width
+              width: MediaQuery.of(context)
+                  .size
+                  .width, // Mengatur lebar menjadi full width
               margin: EdgeInsets.only(top: 220),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

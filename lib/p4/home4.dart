@@ -7,6 +7,8 @@ class home4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: SingleChildScrollView(
@@ -72,12 +74,13 @@ class home4 extends StatelessWidget {
                       ),
                     ),
                     subtitle: Center(
-                        child: Text(
-                      '10 Desember 2023',
-                      style: GoogleFonts.poppins(
-                        fontSize: 12,
+                      child: Text(
+                        '10 Desember 2023',
+                        style: GoogleFonts.poppins(
+                          fontSize: 12,
+                        ),
                       ),
-                    )),
+                    ),
                     tileColor: Color.fromARGB(255, 255, 255, 255),
                   ),
                   Divider(),
@@ -94,12 +97,13 @@ class home4 extends StatelessWidget {
                       ),
                     ),
                     subtitle: Center(
-                        child: Text(
-                      '29 November 2023',
-                      style: GoogleFonts.poppins(
-                        fontSize: 12,
+                      child: Text(
+                        '29 November 2023',
+                        style: GoogleFonts.poppins(
+                          fontSize: 12,
+                        ),
                       ),
-                    )),
+                    ),
                     tileColor: Color.fromARGB(255, 255, 255, 255),
                   ),
                   Divider(),
@@ -116,12 +120,13 @@ class home4 extends StatelessWidget {
                       ),
                     ),
                     subtitle: Center(
-                        child: Text(
-                      '10 November 2023',
-                      style: GoogleFonts.poppins(
-                        fontSize: 12,
+                      child: Text(
+                        '10 November 2023',
+                        style: GoogleFonts.poppins(
+                          fontSize: 12,
+                        ),
                       ),
-                    )),
+                    ),
                     tileColor: Color.fromARGB(255, 255, 255, 255),
                   ),
                   Divider(),
@@ -130,47 +135,226 @@ class home4 extends StatelessWidget {
               ),
             ),
             SizedBox(height: 25),
-            Container(
-              width: double.infinity,
-              padding: EdgeInsets.all(10.0),
-              child: Align(
-                alignment: Alignment.center,
-                child: Text(
-                  'Single Original',
-                  style: GoogleFonts.poppins(
-                    color: Color.fromRGBO(210, 43, 82, 1),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 23,
+            if (screenWidth > 620)
+              Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      children: [
+                        Container(
+                          width: double.infinity,
+                          padding: EdgeInsets.all(10.0),
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Text(
+                              'Single Original',
+                              style: GoogleFonts.poppins(
+                                color: Color.fromRGBO(210, 43, 82, 1),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 23,
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 25),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Expanded(
+                              child: CardWithImage(
+                                image:
+                                    'https://upload.wikimedia.org/wikipedia/id/3/34/JKT48_Sayonara_Crawl_Cover.jpg',
+                                text: 'Sayonara Crawl',
+                              ),
+                            ),
+                            Expanded(
+                              child: CardWithImage(
+                                image:
+                                    'https://upload.wikimedia.org/wikipedia/id/3/32/Flying_High.png',
+                                text: 'Flying High',
+                              ),
+                            ),
+                            Expanded(
+                              child: CardWithImage(
+                                image:
+                                    'https://upload.wikimedia.org/wikipedia/id/2/25/JKT48_-_Rapsodi.jpg',
+                                text: 'Rapsodi',
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                ),
+                  Container(
+                    width: 1,
+                    height: 300,
+                    margin: EdgeInsets.only(right: 15, left: 15),
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                            width: 0.3,
+                            color: Color.fromARGB(255, 196, 196, 196))),
+                  ),
+                  Expanded(
+                    child: Column(
+                      children: [
+                        Container(
+                          width: double.infinity,
+                          padding: EdgeInsets.all(10.0),
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Text(
+                              'Next Birthday',
+                              style: GoogleFonts.poppins(
+                                color: Color.fromRGBO(210, 43, 82, 1),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 23,
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Expanded(
+                              child: BirthdayCard(
+                                image:
+                                    'https://jkt48.com/profile/angelina_christy.jpg?v=20230116',
+                                title: 'Angelina Christy',
+                                subtitle: '5 Desember 2005',
+                              ),
+                            ),
+                            Expanded(
+                              child: BirthdayCard(
+                                image:
+                                    'https://jkt48.com/profile/flora_shafiq.jpg?v=20230116',
+                                title: 'Flora Shafiq',
+                                subtitle: '25 Desember 2004',
+                              ),
+                            ),
+                            Expanded(
+                              child: BirthdayCard(
+                                image:
+                                    'https://jkt48.com/profile/fiony_alveria.jpg?v=20230116',
+                                title: 'Fiony Alveria',
+                                subtitle: '2 Januari 2002',
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              )
+            else
+              Column(
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                        width: double.infinity,
+                        padding: EdgeInsets.all(10.0),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            'Single Original',
+                            style: GoogleFonts.poppins(
+                              color: Color.fromRGBO(210, 43, 82, 1),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 23,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 25),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Expanded(
+                            child: CardWithImage(
+                              image:
+                                  'https://upload.wikimedia.org/wikipedia/id/3/34/JKT48_Sayonara_Crawl_Cover.jpg',
+                              text: 'Sayonara Crawl',
+                            ),
+                          ),
+                          Expanded(
+                            child: CardWithImage(
+                              image:
+                                  'https://upload.wikimedia.org/wikipedia/id/3/32/Flying_High.png',
+                              text: 'Flying High',
+                            ),
+                          ),
+                          Expanded(
+                            child: CardWithImage(
+                              image:
+                                  'https://upload.wikimedia.org/wikipedia/id/2/25/JKT48_-_Rapsodi.jpg',
+                              text: 'Rapsodi',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        width: double.infinity,
+                        padding: EdgeInsets.all(10.0),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            'Next Birthday',
+                            style: GoogleFonts.poppins(
+                              color: Color.fromRGBO(210, 43, 82, 1),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 23,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment
+                            .spaceEvenly, // Untuk mengatur jarak yang sama antara card
+                        children: [
+                          Expanded(
+                            child: BirthdayCard(
+                              image:
+                                  'https://jkt48.com/profile/angelina_christy.jpg?v=20230116',
+                              title: 'Angelina Christy',
+                              subtitle: '5 Desember 2005',
+                            ),
+                          ),
+                          Expanded(
+                            child: BirthdayCard(
+                              image:
+                                  'https://jkt48.com/profile/flora_shafiq.jpg?v=20230116',
+                              title: 'Flora Shafiq',
+                              subtitle: '25 Desember 2004',
+                            ),
+                          ),
+                          Expanded(
+                            child: BirthdayCard(
+                              image:
+                                  'https://jkt48.com/profile/fiony_alveria.jpg?v=20230116',
+                              title: 'Fiony Alveria',
+                              subtitle: '2 Januari 2002',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
               ),
-            ),
-            SizedBox(height: 25),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Expanded(
-                  child: CardWithImage(
-                    image:
-                        'https://upload.wikimedia.org/wikipedia/id/3/34/JKT48_Sayonara_Crawl_Cover.jpg',
-                    text: 'Sayonara Crawl',
-                  ),
-                ),
-                Expanded(
-                  child: CardWithImage(
-                    image:
-                        'https://upload.wikimedia.org/wikipedia/id/3/32/Flying_High.png',
-                    text: 'Flying High',
-                  ),
-                ),
-                Expanded(
-                  child: CardWithImage(
-                    image:
-                        'https://upload.wikimedia.org/wikipedia/id/2/25/JKT48_-_Rapsodi.jpg',
-                    text: 'Rapsodi',
-                  ),
-                ),
-              ],
+            SizedBox(
+              height: 25,
             ),
             SizedBox(height: 30),
             TextButton(
@@ -213,7 +397,7 @@ class home4 extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                    width: double.infinity,
+                    width: MediaQuery.of(context).size.width,
                     padding: EdgeInsets.all(10.0),
                     decoration: BoxDecoration(
                       color: Color.fromRGBO(247, 140, 162, 9),
@@ -322,57 +506,6 @@ class home4 extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-              height: 35,
-            ),
-            Container(
-              width: double.infinity,
-              padding: EdgeInsets.all(10.0),
-              child: Align(
-                alignment: Alignment.center,
-                child: Text(
-                  'Next Birthday',
-                  style: GoogleFonts.poppins(
-                    color: Color.fromRGBO(210, 43, 82, 1),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 23,
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment
-                  .spaceEvenly, // Untuk mengatur jarak yang sama antara card
-              children: [
-                Expanded(
-                  child: BirthdayCard(
-                    image:
-                        'https://jkt48.com/profile/angelina_christy.jpg?v=20230116',
-                    title: 'Angelina Christy',
-                    subtitle: '5 Desember 2005',
-                  ),
-                ),
-                Expanded(
-                  child: BirthdayCard(
-                    image:
-                        'https://jkt48.com/profile/flora_shafiq.jpg?v=20230116',
-                    title: 'Flora Shafiq',
-                    subtitle: '25 Desember 2004',
-                  ),
-                ),
-                Expanded(
-                  child: BirthdayCard(
-                    image:
-                        'https://jkt48.com/profile/fiony_alveria.jpg?v=20230116',
-                    title: 'Fiony Alveria',
-                    subtitle: '2 Januari 2002',
-                  ),
-                ),
-              ],
-            )
           ],
         ),
       ),
@@ -427,7 +560,7 @@ class CardWithImage extends StatelessWidget {
     required this.image,
     required this.text,
     this.cardWidth = 150.0,
-    this.cardHeight = 160.0,
+    this.cardHeight = 225.0,
   });
 
   @override
@@ -445,7 +578,7 @@ class CardWithImage extends StatelessWidget {
           children: [
             Container(
               width: double.infinity,
-              height: 95, // Tinggi gambar
+              height: 145, // Tinggi gambar
               decoration: BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(image),
@@ -458,7 +591,7 @@ class CardWithImage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Container(
-              width: double.infinity,
+              width: MediaQuery.of(context).size.width,
               child: Center(
                 child: Text(
                   text,
@@ -487,7 +620,7 @@ class BirthdayCard extends StatelessWidget {
       {required this.image,
       required this.title,
       required this.subtitle,
-      this.birthdayHeight = 190,
+      this.birthdayHeight = 225,
       this.birthdayWidth = 190});
 
   @override
@@ -505,7 +638,7 @@ class BirthdayCard extends StatelessWidget {
           children: [
             Container(
               width: double.infinity,
-              height: 120,
+              height: 160,
               decoration: BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(image),

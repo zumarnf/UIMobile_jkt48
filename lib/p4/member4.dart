@@ -6,6 +6,7 @@ class member4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: SingleChildScrollView(
@@ -69,19 +70,20 @@ class member4 extends StatelessWidget {
                     10.0), // Padding untuk memberi jarak dari tepi
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: List.generate(4, (rowIndex) {
+                  children:
+                      List.generate((screenWidth > 620) ? 3 : 4, (rowIndex) {
                     return Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: List.generate(3, (colIndex) {
-                        final imageIndex = rowIndex * 3 + colIndex;
+                      children: List.generate((screenWidth > 620) ? 4 : 3,
+                          (colIndex) {
+                        final imageIndex =
+                            rowIndex * ((screenWidth > 620) ? 4 : 3) + colIndex;
                         if (imageIndex < imageUrls.length) {
                           return Container(
-                            width: 75, // Lebar kotak kecil
-                            height: 105, // Tinggi kotak kecil
-                            margin: const EdgeInsets.all(
-                                4.0), // Margin antar kotak kecil
-                            color: Color.fromRGBO(
-                                255, 255, 255, 1), // Warna kotak kecil
+                            width: 75,
+                            height: 105,
+                            margin: const EdgeInsets.all(4.0),
+                            color: Color.fromRGBO(255, 255, 255, 1),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
